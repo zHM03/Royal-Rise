@@ -367,10 +367,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // =================== hamburger menu
 
-const hamburger = document.getElementById("hamburger");
-const nav = document.getElementById("main-nav");
+const hamburger = document.querySelector('.hamburger');
+const mainNav = document.querySelector('.main-nav');
 
-hamburger.addEventListener("click", () => {
-  nav.classList.toggle("active");
-  hamburger.classList.toggle("open");
+// Overlay oluştur
+let overlay = document.createElement('div');
+overlay.classList.add('menu-overlay');
+document.body.appendChild(overlay);
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mainNav.classList.toggle('active');
+  document.body.classList.toggle('menu-open');
+});
+
+// Overlay tıklayınca menüyü kapat
+overlay.addEventListener('click', () => {
+  hamburger.classList.remove('open');
+  mainNav.classList.remove('active');
+  document.body.classList.remove('menu-open');
 });
