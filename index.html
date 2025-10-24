@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Royal Rise</title>
   <link rel="icon" href="assets/images/logo.png" />
+  <link rel="icon" type="image/png" href="assets/images/earth.png" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
@@ -16,7 +18,15 @@
         <img src="assets/images/earth.png" alt="Royal Rise Logo" class="logo" />
         <span class="brand-text">Royal Rise</span>
       </a>
-      <nav class="main-nav">
+
+      <!-- Hamburger -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav class="main-nav" id="main-nav">
         <a href="index.html" class="nav-link active">الصفحة الرئيسية</a>
         <a href="services.html" class="nav-link">الخدمات</a>
         <a href="about.html" class="nav-link">من نحن</a>
@@ -24,6 +34,7 @@
       </nav>
     </div>
   </header>
+
 
   <div id="smooth-wrapper">
     <div id="smooth-content">
@@ -40,9 +51,11 @@
 
             <!-- Sağ taraf: Lead metni -->
             <div class="hero-right">
+              <h2 class="lead-title">
+                معاملاتك الرسمية الآن أسرع وأسهل من أي وقت مضى </h2>
               <p class="lead">
-                شريكك الموثوق لجميع معاملاتك الرسمية والسفرية والتجارية، مع فريقنا المتخصص الذي يجعل كل خطوة سهلة
-                وسريعة.
+                شريكك الموثوق لجميع معاملاتك الرسمية والسفرية والتجارية، مع
+                فريقنا المتخصص الذي يجعل كل خطوة سهلة وسريعة.
               </p>
 
               <!-- Lead yazısı altına taşındı -->
@@ -51,23 +64,35 @@
                 <a class="btn outline" href="contact.html">تواصلو معنا</a>
               </div>
 
-              <p class="whatsapp">
-                WhatsApp:
-                <a href="https://wa.me/905057585971" target="_blank">+90 505 758 59 71</a>
-              </p>
+              <!-- Yeni social box -->
+              <div class="social-box">
+                <a href="https://www.facebook.com/people/Royal-Rise/100095044717990" target="_blank"
+                  class="social-link">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/royal.rise.services" target="_blank" class="social-link">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/905057585971" target="_blank" class="social-link">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
             </div>
-          </div>
         </section>
-
 
         <section class="services-preview container">
           <h2 class="service_title">الخدمات المميزة</h2>
-          <h3 class="service_desc">نقدم مجموعة متكاملة من الخدمات لمساعدتك في جميع احتياجاتك الرسمية</h3>
+          <a href="services.html" class="services-btn">
+            جميع خدماتنا🔹
+          </a>
+          <h3 class="service_desc">
+            نقدم مجموعة متكاملة من الخدمات لمساعدتك في جميع احتياجاتك الرسمية
+          </h3>
 
           <div class="services-wrapper">
             <!-- Solda resim ve yazı -->
             <div class="service-image">
-              <img id="displayed-image" src="assets/images/web.jpg" alt="service" />
+              <img id="displayed-image" src="assets/images/web.png" alt="service" />
               <div id="image-overlay" class="image-overlay">
                 <h3 id="overlay-text">تصميم مواقع ويب</h3>
                 <p id="overlay-desc">
@@ -78,83 +103,187 @@
 
             <!-- Sağda butonlar -->
             <div class="buttons">
-              <button class="service-btn active" data-img="assets/images/web.jpg" data-title="تصميم مواقع ويب"
+              <button class="service-btn active" data-img="assets/images/web.png" data-title="تصميم مواقع ويب"
                 data-desc=".نقوم بإنشاء مواقع ويب حديثة وسريعة الاستجابة">
                 تصميم مواقع ويب🔹
               </button>
 
-              <button class="service-btn" data-img="assets/images/company.jpg" data-title="تأسيس شركات"
+              <button class="service-btn" data-img="assets/images/company.png" data-title="تأسيس شركات"
                 data-desc=".نساعدك في جميع مراحل تسجيل الشركة وإعداد المستندات">
                 تأسيس شركات🔹
               </button>
 
-              <button class="service-btn" data-img="assets/images/visa.jpg" data-title="تجهيز ملفات الفيزا"
+              <button class="service-btn" data-img="assets/images/visa.png" data-title="تجهيز ملفات الفيزا"
                 data-desc=".نوفر لك جميع المستندات اللازمة للحصول على التأشيرة">
                 تجهيز ملفات الفيزا🔹
               </button>
 
-              <button class="service-btn" data-img="assets/images/translation.jpg" data-title="ترجمة مصدقة"
+              <button class="service-btn" data-img="assets/images/translation.png" data-title="ترجمة مصدقة"
                 data-desc=".ترجمة دقيقة وموثقة لجميع أنواع الوثائق">
                 ترجمة مصدقة🔹
               </button>
 
-              <button class="service-btn" data-img="assets/images/ticket.jpg" data-title="حجوزات طيران"
+              <button class="service-btn" data-img="assets/images/ticket.png" data-title="حجوزات طيران"
                 data-desc=".أفضل الأسعار على الرحلات الجوية حول العالم">
                 حجوزات طيران🔹
               </button>
 
-              <button class="service-btn" data-img="assets/images/document.jpg" data-title="تجهيز ملفات الاقامة"
+              <button class="service-btn" data-img="assets/images/document.png" data-title="تجهيز ملفات الاقامة"
                 data-desc=".نساعدك في تجهيز كل المستندات اللازمة للإقامة">
                 تجهيز ملفات الاقامة🔹
+              </button>
+              <button class="service-btn" data-img="assets/images/test.png" data-title="حجز مواعيد"
+                data-desc="حجز مواعيد">
+                حجز مواعيد🔹
+              </button>
+              <button class="service-btn" data-img="assets/images/test.png" data-title="تصديق اوراق"
+                data-desc="تصديق اوراق">
+                تصديق اوراق🔹
               </button>
             </div>
           </div>
         </section>
 
-        <section class="achievements">
+        <section class="testimonials">
+          <h2 class="testimonials-title">ماذا يقول عملاؤنا</h2>
+          <p class="testimonials-desc">تعرف على تجارب بعض عملائنا معنا</p>
+
+          <div class="testimonials-wrapper">
+            <div class="testimonial">
+              <p class="client-comment">موقعنا الإلكتروني أصبح حديث وسريع بفضل فريق Royal Rise.</p>
+              <span class="client-name">– محمد ل.</span>
+            </div>
+            <div class="testimonial">
+              <p class="client-comment">Royal Rise جعلوا عملية تأسيس شركتي سهلة وسريعة جدًا.</p>
+              <span class="client-name">– أحمد ك.</span>
+            </div>
+
+            <div class="testimonial">
+              <p class="client-comment">لقد ساعدوني في تجهيز ملفات الفيزا بدقة واحترافية.</p>
+              <span class="client-name">– سارة ت.</span>
+            </div>
+          </div>
+
           <h2 class="achievements_title">
-            نحن هنا لنكون شريكك الموثوق في جميع احتياجاتك التجارية والسفرية. مع خبرتنا الواسعة وفريقنا المتخصص، نجعل كل
-            خطوة من إجراءات التصديقات، استخراج الفيز والإقامات، حجز المواعيد، تأسيس الشركات، التسويق، وتصميم المواقع
-            سهلة وسريعة، لتتمكن من التركيز على نجاح أعمالك وتحقيق أهدافك بثقة واطمئنان.
+            نحن هنا لنكون شريكك الموثوق في جميع احتياجاتك التجارية والسفرية.
+            مع خبرتنا الواسعة وفريقنا المتخصص، نجعل كل خطوة من إجراءات
+            التصديقات، استخراج الفيز والإقامات، حجز المواعيد، تأسيس الشركات،
+            التسويق، وتصميم المواقع سهلة وسريعة، لتتمكن من التركيز على نجاح
+            أعمالك وتحقيق أهدافك بثقة واطمئنان.
           </h2>
 
           <div class="stats">
             <div class="stat">
-              <span class="number">+7</span>
+              <span class="number" data-target="+5" data-plus="true">0</span>
               <span class="label">سنوات الخبرة</span>
             </div>
             <div class="stat">
-              <span class="number">6</span>
+              <span class="number" data-target="4" data-plus="false">0</span>
               <span class="label">أعضاء الفريق</span>
             </div>
             <div class="stat">
-              <span class="number">+100</span>
+              <span class="number" data-target="100" data-plus="true">0</span>
               <span class="label">عملاء سعداء</span>
             </div>
-
           </div>
         </section>
 
+        <section class="how-it-works container">
+          <h2 class="section-title">كيف نعمل</h2>
+          <p class="section-intro">
+            يمكنك التواصل معنا عبر <strong>الواتساب</strong> أو زيارة <strong>مكتبنا</strong> لتجهيز معاملاتك بخطوات
+            بسيطة وسريعة.
+          </p>
 
+          <div class="work-options">
+            <div class="option">
+              <i class="fa-brands fa-whatsapp"></i>
+              <h3>عبر الواتساب</h3>
+              <p>أرسل لنا المستندات المطلوبة وسنقوم بمتابعة جميع الإجراءات عن بُعد.</p>
+              <a href="https://wa.me/905057585971" class="btn">تواصل الآن</a>
+            </div>
 
-        <section class="cta-banner">
-          <div class="container">
-            <p>يمكنم التواصل معنا على الواتس اب</p>
-            <a href="https://wa.me/9055057585971" target="_blank" class="btn primary">اتصل معنا</a>
+            <div class="option">
+              <i class="fa-solid fa-building"></i>
+              <h3>زيارة المكتب</h3>
+              <p>يمكنك زيارتنا شخصيًا لتقديم المستندات واستلام النتيجة في المكان.</p>
+              <a href="contact.html" class="btn">موقع المكتب</a>
+            </div>
+          </div>
+
+          <div class="steps">
+            <div class="step"><span>1</span> تواصل معنا</div>
+            <div class="step"><span>2</span> قدم المستندات</div>
+            <div class="step"><span>3</span> تجهيز الملفات</div>
+            <div class="step"><span>4</span> استلم النتيجة</div>
           </div>
         </section>
+
+        <section class="why-us container">
+          <h2 class="section-title">لماذا نحن؟</h2>
+          <p class="section-intro">
+            نؤمن أن نجاحك هو نجاحنا، نحرص على تقديم خدمات احترافية وسريعة
+            تراعي أدق التفاصيل وتلبي جميع احتياجاتك الرسمية والتجارية والسفرية.
+          </p>
+
+          <div class="features">
+            <div class="feature">
+              <i class="fa-solid fa-bolt"></i>
+              <h3>السرعة والكفاءة</h3>
+              <p>ننجز معاملاتك في أقصر وقت ممكن دون المساس بالجودة.</p>
+            </div>
+
+            <div class="feature">
+              <i class="fa-solid fa-user-shield"></i>
+              <h3>الاحترافية والثقة</h3>
+              <p>نعمل بشفافية تامة مع التزام كامل بسرية معلوماتك.</p>
+            </div>
+
+            <div class="feature">
+              <i class="fa-solid fa-handshake"></i>
+              <h3>خدمة مخصصة لك</h3>
+              <p>كل عميل له اهتمام خاص لضمان تلبية جميع احتياجاته.</p>
+            </div>
+
+            <div class="feature">
+              <i class="fa-solid fa-earth-americas"></i>
+              <h3>خدمات متنوعة</h3>
+              <p>من الترجمة والتصديقات إلى تأسيس الشركات وحجوزات السفر.</p>
+            </div>
+            <a class="btn primary" href="about.html">من نحن</a>
+          </div>
+        </section>
+
       </main>
 
       <footer class="site-footer">
         <div class="container footer-inner">
-          <div>
-            <p>
-              &copy; <span id="year"></span> Royal Rise. Tüm hakları saklıdır.
+
+          <!-- Sağda metin ve telif -->
+          <div class="footer-right">
+            <p class="footer-desc">
+              نقدم حلولاً شاملة ومبتكرة لجميع معاملاتك الرسمية والسفرية والتجارية.
+              مع فريقنا المتخصص وخبرتنا الواسعة، نحرص على تقديم خدمات عالية الجودة تساعدك على إنجاز أعمالك بسرعة وكفاءة،
+              مع ضمان الاحترافية والدقة في كل خطوة، وتمكينك من تحقيق أهدافك بثقة وراحة بال.
             </p>
+            <p>&copy; <span id="year"></span> Royal Rise. جميع الحقوق محفوظة.</p>
           </div>
-          <div>
-            <a href="https://www.royalrise.com" target="_blank">www.royalrise.com</a>
+
+          <!-- Solda sosyal ikonlar -->
+          <div class="footer-left">
+            <div class="footer-social">
+              <a href="https://www.facebook.com/people/Royal-Rise/100095044717990" target="_blank" class="social-link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.instagram.com/royal.rise.services" target="_blank" class="social-link">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://wa.me/905057585971" target="_blank" class="social-link">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
           </div>
+
         </div>
       </footer>
 
