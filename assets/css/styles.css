@@ -874,15 +874,15 @@ transition: transform 0.35s ease, background 0.35s ease, border-color 0.35s ease
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    z-index: 101;
   }
-
   .hamburger span {
     display: block;
-    width: 25px;
+    width: 30px;
     height: 3px;
     background: var(--accent);
     border-radius: 3px;
-    transition: 0.3s;
+    transition: all 0.3s ease;
   }
 
   .hamburger.open span:nth-child(1) {
@@ -896,22 +896,35 @@ transition: transform 0.35s ease, background 0.35s ease, border-color 0.35s ease
   }
 
   .main-nav {
-    display: none; /* başta gizli */
+    display: flex;
     flex-direction: column;
     gap: 10px;
-    background: rgba(0,0,0,0.8);
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 200px;
-    padding: 10px;
-    border-radius: 10px;
-    z-index: 50;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 00;
+    left: 0;
+    width: 100vw;
+    background: rgba(0,0,0,0.95);
+    /* Başlangıçta yukarıda ama gizli */
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.4s ease;
+    margin-top: 75px;
+
   }
 
   .main-nav.active {
-    display: flex;
+    margin-top: 75px;
+    transform: translateY(0);
+    opacity: 1;
   }
+
+  .main-nav .nav-link {
+    font-size: 1rem;
+    padding: 15px 25px;
+    text-align: center;
+  }
+
 
   /* Hero ve içerik */
   .hero-inner {
