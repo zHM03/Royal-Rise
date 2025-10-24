@@ -14,6 +14,19 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 //===================== Kaydırma 
 
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+// Mobil kontrolü
+if (window.innerWidth > 1024) { // 1024px üstü = masaüstü/tablet
+  ScrollSmoother.create({
+    smooth: 1,
+    effects: true,
+    smoothTouch: 0.1,
+    speed: 1.5,
+  });
+} else {
+  console.log("Mobilde ScrollSmoother kapalı"); 
+}
 
 //===================== Royal Rise
 document.fonts.ready.then(() => {
