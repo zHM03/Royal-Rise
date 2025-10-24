@@ -13,14 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 //===================== Kaydırma 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-ScrollSmoother.create({
-  smooth: 1,
-  effects: true,
-  smoothTouch: 0.1,
-  speed: 1.5,
-});
 
 //===================== Royal Rise
 document.fonts.ready.then(() => {
