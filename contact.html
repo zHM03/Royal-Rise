@@ -1,19 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Royal Rise</title>
   <link rel="icon" href="assets/images/logo.png" />
-  <link rel="icon" type="image/png" href="assets/images/earth.png" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" type="image/png" href="assets/images/logos/earth.png" />
+  <link rel="stylesheet" href="assets/css/main-style.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
+
 <body>
   <header class="site-header">
     <div class="container nav-container">
       <a class="brand" href="index.html">
-        <img src="assets/images/earth.png" alt="Royal Rise Logo" class="logo" />
+        <img src="assets/images/logos/earth.png" alt="Royal Rise Logo" class="logo" />
         <span class="brand-text">Royal Rise</span>
       </a>
 
@@ -26,52 +30,87 @@
 
       <nav class="main-nav" id="main-nav">
         <a href="index.html" class="nav-link">الصفحة الرئيسية</a>
-        <a href="services.html" class="nav-link">الخدمات</a>
+        <a href="services.html" class="nav-link">خدماتنا</a>
         <a href="about.html" class="nav-link">من نحن</a>
         <a href="contact.html" class="nav-link active">اتصل بنا</a>
       </nav>
     </div>
   </header>
-<div id="smooth-wrapper">
-  <div id="smooth-content">
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main class="container contact-container">
+        <section class="contact-section">
+          <h1 class="contact-title">اتصل بنا</h1>
+          <p class="contact-intro">
+            يسعدنا سماعكم! إذا كان لديكم أي أسئلة أو تحتاجون إلى دعم، يرجى ملء
+            النموذج أدناه أو التواصل معنا مباشرة عبر البريد الإلكتروني أو
+            الهاتف.
+          </p>
 
-    <main class="container contact-page">
-      <section class="page-header">
-        <h1>تواصل معنا</h1>
-        <p>للتواصل معنا، يرجى ملء النموذج أدناه أو الكتابة مباشرة عبر واتساب.</p>
-      </section>
-      
-      <section class="contact-grid">
-        <form id="contactForm" class="contact-form">
-          <label>الاسم الكامل <input type="text" name="name" required></label>
-          <label>البريد الإلكتروني <input type="email" name="email" required></label>
-          <label>الرسالة <textarea name="message" rows="6" required></textarea></label>
-          <button type="submit" class="btn primary">إرسال</button>
-        </form>
-        
-        <div class="contact-info">
-          <h3>معلومات التواصل</h3>
-          <p>واتساب: <a href="https://wa.me/9055057585971" target="_blank">+90 505 758 59 71</a></p>
-          <p>الموقع: <a href="https://www.royalrise.com" target="_blank">www.royalrise.com</a></p>
-          <h4>العنوان</h4>
-          <p>إسطنبول، تركيا</p>
-        </div>
-      </section>
-    </main>
-    
+          <div class="contact-content">
+            <!-- Sol taraf: iletişim bilgileri -->
+            <div class="contact-info">
+              <h2 class="contact-info-title">معلومات الاتصال</h2>
+              <ul class="contact-info">
+                <li>
+                  <a href="mailto:info@royalrise.com"><i class="fa-solid fa-envelope"></i>
+                    info@royalrise.com</a>
+                </li>
+                <li class="phone-item">
+                  <i class="fa-solid fa-phone"></i>
+                  <a href="tel:+905057585971" class="phone-number">+90 505 758 5971</a>
+                </li>
+                <li> العنوان: بورصا, تركيا
+                </li>
+              </ul>
+              </p>
+              <div class="contact-social">
+                <a href="https://www.facebook.com/people/Royal-Rise/100095044717990" target="_blank"><i
+                    class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/royal.rise.services" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/905057585971" target="_blank"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </div>
+
+            <!-- Sağ taraf: iletişim formu -->
+            <div class="contact-form">
+              <form action="#" method="POST">
+                <h2>ارسل لنا رسالتك</h2>
+                <label for="name">الاسم الكامل</label>
+                <input type="text" id="name" name="name" placeholder="اكتب اسمك هنا" required />
+
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" id="email" name="email" placeholder="example@mail.com" required />
+
+                <label for="message">رسالتك</label>
+                <textarea id="message" name="message" rows="5" placeholder="اكتب رسالتك هنا" required></textarea>
+
+                <button type="submit" class="btn-submit">
+                  إرسال الرسالة
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
       <footer class="site-footer">
-        <div class="container footer-inner">
-
+        <div class="footer-inner">
           <!-- Sağda metin ve telif -->
           <div class="footer-right">
             <p class="footer-desc">
-              نقدم حلولاً شاملة ومبتكرة لجميع معاملاتك الرسمية والسفرية والتجارية.
-              مع فريقنا المتخصص وخبرتنا الواسعة، نحرص على تقديم خدمات عالية الجودة تساعدك على إنجاز أعمالك بسرعة وكفاءة،
-              مع ضمان الاحترافية والدقة في كل خطوة، وتمكينك من تحقيق أهدافك بثقة وراحة بال.
+              نقدم حلولاً شاملة ومبتكرة لجميع معاملاتك الرسمية والسفرية
+              والتجارية. مع فريقنا المتخصص وخبرتنا الواسعة، نحرص على تقديم
+              خدمات عالية الجودة تساعدك على إنجاز أعمالك بسرعة وكفاءة، مع ضمان
+              الاحترافية والدقة في كل خطوة، وتمكينك من تحقيق أهدافك بثقة وراحة
+              بال.
             </p>
-            <p>&copy; <span id="year"></span> Royal Rise. جميع الحقوق محفوظة.</p>
+            <p>
+              &copy; <span id="year"></span> Royal Rise. جميع الحقوق محفوظة.
+            </p>
           </div>
-          
+
           <!-- Solda sosyal ikonlar -->
           <div class="footer-left">
             <div class="footer-social">
@@ -86,7 +125,6 @@
               </a>
             </div>
           </div>
-
         </div>
       </footer>
       <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
@@ -95,8 +133,8 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
 
       <script src="assets/js/main.js"></script>
+    </div>
   </div>
-  </div>
-  </body>
-  </html>
-  
+</body>
+
+</html>
