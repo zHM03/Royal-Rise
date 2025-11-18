@@ -1,0 +1,627 @@
+.hero {
+  position: relative; /* ::before için gerekli */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../images/background/office.png") no-repeat center
+    center/cover;
+  opacity: 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  background: rgba(12, 7, 17, 0.61); /* %50 siyah karartma */
+  z-index: 1;
+}
+
+.hero-inner {
+  display: flex;
+  gap: 40px; /* solda globe, sağda metin arası boşluk */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  z-index: 2;
+}
+
+.hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* başlık + globe ortalanır */
+}
+
+.hero-right {
+  flex: 1;
+  text-align: right; /* Arapça metin sağa yaslı */
+  direction: rtl;
+  unicode-bidi: embed;
+  width: 420px;
+  display: flex;
+  flex-direction: column; /* elemanları alt alta diz */
+  align-items: flex-end; /* sağa yasla */
+  text-align: right; /* metin de sağa yaslı */
+}
+
+.hero-left h1 {
+  font-size: 60px;
+  margin: 0;
+  color: var(--accent);
+  text-shadow: 0 6px 18px rgba(107, 93, 245, 0.12);
+}
+
+.lead-title {
+  direction: rtl;
+  unicode-bidi: embed;
+  justify-content: flex-start;
+  font-size: 25px;
+  text-align: right;
+  margin: 0;
+  background: linear-gradient(to right, rgb(111, 93, 245), rgb(59, 100, 211));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lead {
+  font-size: 20px;
+  color: #d8d6ee;
+  margin-bottom: 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(111, 93, 245, 0.3),
+    rgba(59, 99, 211, 0.3)
+  );
+  padding: 20px;
+  border-radius: 25px;
+}
+.hero-ctas {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease; /* hover için geçiş */
+}
+
+.btn.primary {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: white;
+}
+
+.btn.primary:hover {
+  background-position: 100% 0; /* gradient hafif hareket */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* hafif yukarı kalkma efekti */
+}
+
+.btn.outline {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--muted);
+  background: transparent;
+}
+
+.btn.outline:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.whatsapp {
+  margin-top: 14px;
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.hero-right {
+  width: 420px;
+  display: flex;
+  justify-content: center;
+}
+.globe-wrap {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(
+      circle at 30% 20%,
+      rgba(107, 93, 245, 0.16),
+      transparent 50%
+    ),
+    rgba(6, 2, 71, 0);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  margin-top: 20px;
+}
+
+.globe {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 4px 24px rgba(59, 99, 211, 0.12));
+}
+
+.social-box {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+  justify-content: flex-end;
+}
+
+.social-link {
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 25px;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* =================================hizmetler */
+
+.services-preview {
+  min-height: 100vh;
+}
+
+.service_title {
+  color: var(--accent);
+  text-align: right;
+  padding-top: 62px;
+  font-size: 2rem;
+}
+
+.service_desc {
+  text-align: right;
+  padding: 26px;
+  font-size: 1.5rem;
+}
+
+.services-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.service-image {
+  position: relative;
+  flex: 1;
+}
+
+.service-image img {
+  max-width: 540px;
+  border-radius: 25px;
+  display: block;
+  transition: opacity 0.5s ease; /* smooth fade geçiş */
+  opacity: 1; /* varsayılan opaklık */
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 36px;
+  background: rgba(12, 7, 17, 0.75); /* %50 siyah karartma */
+  border-radius: 25px;
+  color: #fff;
+  text-align: center;
+  transition: opacity 0.5s ease; /* overlay için fade */
+  opacity: 1; /* varsayılan opaklık */
+}
+
+#overlay-text,
+#overlay-desc {
+  transition: opacity 0.5s ease; /* overlay için fade */
+}
+
+.buttons {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.services-btn {
+  text-decoration: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: 1px solid #6c5df560;
+  border-radius: 14px;
+  cursor: pointer;
+  background-color: rgba(15, 13, 22, 0.5); /* şeffaf renk */
+  color: white;
+  backdrop-filter: blur(10px);
+  text-align: right;
+  transition: all 0.35s ease;
+}
+
+.services-btn:hover {
+  transform: translateY(-6px);
+  background: rgba(111, 93, 245, 0.1);
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(111, 93, 245, 0.3);
+}
+
+.service-btn {
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 1.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  cursor: pointer;
+  background: var(--glass);
+  color: white;
+  backdrop-filter: blur(10px);
+  text-align: right;
+}
+
+.service-btn:hover {
+  transform: translateY(-6px);
+  background: rgba(111, 93, 245, 0.1);
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(111, 93, 245, 0.3);
+  transition: transform 0.35s ease, background 0.35s ease,
+    border-color 0.35s ease, box-shadow 0.35s ease; /* sadece hover geçişleri */
+}
+
+.service-btn.active {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #fff;
+}
+
+/* =========================== yorumalar */
+
+.testimonials {
+  padding: 80px 0;
+  background-color: rgba(15, 13, 22, 0.5); /* şeffaf renk */
+  border-radius: 20px;
+  margin: 60px auto; /* sayfada ortalama */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* tüm içerik ortalanır */
+  max-width: 1200px; /* isteğe göre genişlik */
+}
+
+.testimonials-title {
+  font-size: 2rem;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.testimonials-desc {
+  font-size: 1.3rem;
+  color: var(--muted);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.testimonials-wrapper {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  background: var(--glass);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 20px;
+  width: 280px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: scale(1.15);
+  transform: translateY(-6px);
+  background: rgba(111, 93, 245, 0.1);
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(111, 93, 245, 0.3);
+}
+
+.client-comment {
+  text-align: center;
+  direction: rtl;
+  unicode-bidi: embed;
+  font-size: 1rem;
+  color: #d8d6ee;
+  margin-bottom: 10px;
+}
+
+.client-name {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.achievements_title {
+  position: relative; /* pseudo-elementin üstünde */
+  font-size: 1.5rem;
+  max-width: 900px;
+  text-align: right;
+  margin: 30px 0;
+  padding: 56px;
+  text-align: right; /* Arapça metin sağa yaslı */
+  direction: rtl;
+  unicode-bidi: embed;
+  border-radius: 25px;
+}
+
+.stats {
+  display: flex;
+  gap: 100px; /* istatistikler arası boşluk */
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat .number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.stat .label {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* ======================== cta */
+
+.cta-banner {
+  direction: rtl;
+  unicode-bidi: embed;
+  border-radius: 30px;
+  text-align: center;
+}
+
+/* ========================= nasıl çalışır */
+
+.how-it-works {
+  text-align: center;
+  padding: 100px 20px;
+  border-radius: 20px;
+  margin-top: 80px;
+}
+
+.how-it-works .section-title {
+  font-size: 2rem;
+  direction: rtl;
+  unicode-bidi: embed;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+.how-it-works .section-intro {
+  direction: rtl;
+  unicode-bidi: embed;
+  font-size: 1.3rem;
+  color: var(--muted);
+  max-width: 700px;
+  margin: 0 auto 50px;
+  line-height: 1.8;
+}
+
+.work-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 60px;
+}
+
+.option {
+  background: var(--glass);
+  padding: 30px 25px;
+  border-radius: 18px;
+  width: 280px;
+  text-align: center;
+  transition: all 0.35s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+}
+
+.option:hover {
+  transform: translateY(-6px);
+  background: rgba(111, 93, 245, 0.1);
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(111, 93, 245, 0.3);
+}
+
+.option i {
+  font-size: 40px;
+  color: var(--accent);
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.option h3 {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.option p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.option .btn {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.option .btn:hover {
+  background-position: 100% 0; /* gradient hafif hareket */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* hafif yukarı kalkma efekti */
+}
+
+.option:hover i {
+  transform: scale(1.15);
+  color: var(--accent-2);
+}
+
+.steps {
+  direction: rtl;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+}
+
+.step {
+  background: var(--glass);
+  padding: 14px 22px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  transition: 0.3s;
+}
+
+.step:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+.step span {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #000;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  margin-left: 8px;
+}
+/* ================================ neden biz */
+
+.why-us {
+  text-align: center;
+  padding: 120px 30px;
+  background-color: rgba(15, 13, 22, 0.5); /* şeffaf renk */
+  border-radius: 20px;
+  color: var(--muted);
+}
+
+.why-us .section-title {
+  direction: rtl;
+  unicode-bidi: embed;
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.why-us .section-title::after {
+  content: "";
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 3px;
+}
+
+.why-us .section-intro {
+  max-width: 700px;
+  margin: 0 auto 60px;
+  line-height: 1.7;
+  color: var(--muted);
+  font-size: 1.3rem;
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+.feature {
+  background: var(--glass);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 30px 20px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.feature i {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.feature h3 {
+  direction: rtl;
+  unicode-bidi: embed;
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  direction: rtl;
+  unicode-bidi: embed;
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.feature:hover {
+  transform: translateY(-6px);
+  background: rgba(111, 93, 245, 0.1);
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(111, 93, 245, 0.3);
+}
+
+.feature:hover i {
+  transform: scale(1.15);
+  color: var(--accent-2);
+}
+
+.why-us-text {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.why-us-btn {
+  display: inline-block;
+}

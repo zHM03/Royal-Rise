@@ -1,0 +1,55 @@
+/* Başlıklar */
+.about-title-section {
+  font-size: 3rem;
+  color: var(--accent);
+  text-align: right;
+  padding: 30px 60px;
+  border-radius: 25px;
+  direction: rtl;
+  text-align: right;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 50px;
+}
+
+/* Görsel */
+.about-image {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.about-image img {
+  max-width: 1000px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(111, 93, 245, 0.25);
+  transition: transform 0.4s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+.mission-title,
+.services-list-title,
+.about-title {
+  direction: rtl;
+  font-size: 2.5rem;
+  color: var(--accent);
+}
+
+.about-intro,
+.mission-text {
+  line-height: 2.2;
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-bottom: 30px;
+}
+
+.about h3 {
+  direction: rtl;
+  color: rgb(186, 187, 255);
+}
+
+.about p {
+  direction: rtl;
+  font-size: 1.1rem;
+}

@@ -1,0 +1,265 @@
+/* --------------------- Container --------------------- */
+.container.contact-container {
+  margin-top: 50px;
+  direction: rtl; /* Arapça/RTL için */
+  padding: 48px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* --------------------- Section Card --------------------- */
+.contact-section {
+  width: 100%;
+  max-width: var(--max-width);
+  border-radius: 25px;
+  padding: 36px;
+  min-height: 100vh;
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* --------------------- Headings --------------------- */
+.contact-title {
+  font-size: 3rem;
+  color: var(--accent);
+  text-align: right;
+  padding: 30px 60px;
+  margin-bottom: 50px;
+}
+.contact-intro {
+  font-size: 1.1rem;
+  line-height: 2.2;
+  color: var(--muted);
+  margin-bottom: 30px;
+}
+
+/* --------------------- Layout --------------------- */
+.contact-content {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+/* --------------------- Left Panel (Info) --------------------- */
+.contact-content > .contact-info {
+  flex: 1 1 320px;
+  min-width: 260px;
+  max-width: 420px;
+  padding: 22px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, var(--glass), var(--glass-2));
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* içerik ortada */
+}
+
+/* Başlık sağda */
+.contact-info-title {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+/* Liste ve diğer içerik ortada */
+.contact-content > .contact-info ul.contact-info {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-social {
+  display: flex;
+  flex-direction: row; /* yan yana sıralama */
+  justify-content: center; /* ortada hizalama */
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.contact-content > .contact-info ul.contact-info li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+/* Telefon numarası: simge sağda, numara solda */
+.phone-item {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  direction: rtl; /* simge sağda kalır */
+}
+
+.phone-item .phone-number {
+  direction: ltr;
+  unicode-bidi: embed;
+}
+
+/* Linkler */
+.contact-content > .contact-info ul.contact-info a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.18s ease, transform 0.18s ease;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 25px;
+  border-radius: 25px;
+}
+.contact-content > .contact-info ul.contact-info a:hover {
+  transform: translateY(-6px);
+  background: linear-gradient(
+    90deg,
+    rgba(124, 92, 255, 0.14),
+    rgba(108, 99, 255, 0.08)
+  );
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(124, 92, 255, 0.12);
+}
+
+/* Sosyal ikonlar */
+.contact-social {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.contact-social a {
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  color: var(--muted);
+  font-size: 25px;
+  text-decoration: none;
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+.contact-social a:hover {
+  transform: translateY(-6px);
+  background: linear-gradient(
+    90deg,
+    rgba(124, 92, 255, 0.14),
+    rgba(108, 99, 255, 0.08)
+  );
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(124, 92, 255, 0.12);
+}
+
+/* --------------------- Right Panel (Form) --------------------- */
+.contact-content > .contact-form {
+  flex: 1 1 420px;
+  min-width: 260px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.015), transparent);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+/* Form elemanları */
+.contact-form label {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 4px;
+  display: block;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  outline: none;
+  font-size: 15px;
+  resize: vertical;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease,
+    transform 0.12s ease;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: rgba(124, 92, 255, 0.9);
+  box-shadow: 0 6px 20px rgba(124, 92, 255, 0.09);
+  transform: translateY(-2px);
+}
+
+.contact-form ::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.btn-submit {
+  padding: 10px 20px;
+  margin-top: 6px;
+  align-self: flex-start;
+  border-radius: 12px;
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--accent), #5b46ff 70%);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 28px rgba(92, 64, 255, 0.18);
+  transition: transform 0.14s ease, box-shadow 0.14s ease, opacity 0.12s ease;
+}
+.btn-submit:hover {
+  transform: translateY(-4px);
+}
+.btn-submit:active {
+  transform: translateY(-1px);
+  opacity: 0.98;
+}
+
+/* --------------------- Animasyon Başlangıcı --------------------- */
+.contact-content,
+.contact-info,
+.contact-form {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* --------------------- Responsive --------------------- */
+@media (max-width: 900px) {
+  .contact-section {
+    padding: 24px;
+  }
+  .contact-content {
+    gap: 18px;
+  }
+  .contact-content > .contact-info,
+  .contact-content > .contact-form {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+@media (max-width: 420px) {
+  .container.contact-container {
+    padding: 18px 12px;
+  }
+  .contact-title {
+    font-size: 22px;
+  }
+  .contact-section {
+    padding: 18px;
+    border-radius: 14px;
+  }
+  .btn-submit {
+    width: 100%;
+    text-align: center;
+  }
+}

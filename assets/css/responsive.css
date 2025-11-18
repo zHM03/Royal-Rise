@@ -1,0 +1,425 @@
+@media (max-width: 1024px) {
+  .container {
+    padding: 20px;
+  }
+
+  /* Nav ve hamburger */
+  .nav-container {
+    display: flex;
+    justify-content: space-between; /* Brand solda, hamburger sağda */
+    align-items: center;
+    gap: 10px;
+    position: relative;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 101;
+  }
+  .hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .main-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 00;
+    left: 0;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.95);
+    /* Başlangıçta yukarıda ama gizli */
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.4s ease;
+    margin-top: 75px;
+  }
+
+  .main-nav.active {
+    margin-top: 75px;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .main-nav .nav-link {
+    font-size: 1rem;
+    padding: 15px 25px;
+    text-align: center;
+  }
+
+  /* Hero ve içerik */
+  .hero-inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-right {
+    justify-content: center;
+  }
+  .services-wrapper {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .service-image img {
+    max-width: 80%; /* Görsel ekranı sarsın ama taşmasın */
+  }
+
+  .buttons {
+    align-items: center;
+    width: 100%;
+  }
+
+  .services-btn,
+  .service-btn {
+    text-align: center;
+  }
+
+  .service_title {
+    font-size: 1.8rem;
+    padding-top: 40px;
+  }
+
+  .service_desc {
+    font-size: 1.3rem;
+    padding: 20px;
+  }
+  .why-us {
+    margin-top: 120px;
+  }
+  .about-image {
+    width: 100%;
+    max-width: 600px; /* isteğe göre sınır */
+    margin: 0 auto;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    border-radius: 12px; /* isteğe bağlı */
+  }
+}
+
+/* -------------------------
+   Orta mobil / tablet altı (768px)
+------------------------- */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .brand-text {
+    font-size: 1.2rem;
+  }
+
+  .nav-link {
+    padding: 6px 8px;
+    font-size: 0.9rem;
+  }
+
+  .hero-left h1 {
+    font-size: 2rem;
+  }
+
+  .lead-title {
+    font-size: 20px;
+  }
+
+  .lead {
+    font-size: 16px;
+    padding: 15px;
+    max-width: 400px;
+  }
+
+  .globe-wrap {
+    width: 240px;
+    height: 240px;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social-box {
+    justify-content: center;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+  .service_title {
+    font-size: 1.5rem;
+    padding-top: 30px;
+  }
+
+  .service_desc {
+    font-size: 1.1rem;
+    padding: 15px;
+  }
+
+  .service-image img {
+    max-width: 100%;
+    border-radius: 20px;
+  }
+
+  .image-overlay {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .buttons {
+    gap: 8px;
+  }
+
+  .services-btn {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+
+  .service-btn {
+    font-size: 1.2rem;
+    padding: 12px 16px;
+  }
+  .stats {
+    gap: 30px;
+  }
+
+  .stat .number {
+    font-size: 1.6rem;
+  }
+
+  .stat .label {
+    font-size: 0.9rem;
+  }
+  .why-us {
+    margin-top: 120px;
+  }
+  .services-layout {
+    flex-direction: column;
+    padding: 40px 15px;
+  }
+  .services-title {
+    font-size: 2rem;
+  }
+  .servicess-intro {
+    font-size: 1.2rem;
+  }
+  .about-title-section {
+    font-size: 2rem;
+  }
+  .contact-title {
+    font-size: 2rem;
+  }
+  .services-list-title,
+  .mission-title,
+  .about-title {
+    font-size: 1.7rem;
+  }
+
+  .services-menu {
+    width: 100%;
+    order: 2; /* menü aşağıda görünsün istiyorsan 2 yap */
+    margin-top: 30px;
+  }
+
+  .services-menu h3 {
+    text-align: center;
+  }
+
+  .services-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .services-menu li {
+    margin-bottom: 10px;
+  }
+
+  .services-menu li a {
+    display: block;
+    padding: 10px 15px;
+    font-size: 0.95rem;
+  }
+
+  .services-content {
+    width: 100%;
+    order: 1;
+  }
+
+  .service-details {
+    text-align: right;
+    font-size: 0.9rem;
+  }
+}
+
+/* -------------------------
+   Küçük mobil (480px altı)
+------------------------- */
+@media (max-width: 480px) {
+  .hero-left h1 {
+    font-size: 45px;
+  }
+
+  .lead-title {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .lead {
+    font-size: 16px;
+    padding: 10px;
+    text-align: right;
+  }
+
+  .globe-wrap {
+    width: 250px;
+    height: 250px;
+  }
+
+  .social-link {
+    width: 35px;
+    height: 35px;
+    font-size: 23px;
+  }
+
+  .btn {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+  .service_title {
+    font-size: 2rem;
+    padding-top: 20px;
+  }
+
+  .service_desc {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .service-image img {
+    max-width: 100%;
+    border-radius: 15px;
+  }
+
+  .image-overlay {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  .services-btn {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  .service-btn {
+    font-size: 1rem;
+    padding: 10px 14px;
+  }
+  .stats {
+    gap: 20px;
+  }
+
+  .stat .number {
+    font-size: 1.4rem;
+  }
+
+  .stat .label {
+    font-size: 0.8rem;
+  }
+  .why-us {
+    margin-top: 120px;
+  }
+  .services-menu h3 {
+    font-size: 1rem;
+  }
+
+  .services-menu li a {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+
+  .service-details {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero-left h1 {
+    margin-top: 100px;
+    font-size: 30px;
+  }
+
+  .lead-title {
+    font-size: 18px;
+  }
+
+  .lead {
+    font-size: 14px;
+    padding: 10px;
+    text-align: right;
+  }
+
+  .globe-wrap {
+    width: 200px;
+    height: 200px;
+  }
+
+  .social-link {
+    width: 35px;
+    height: 35px;
+    font-size: 23px;
+  }
+
+  .btn {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+  .why-us {
+    margin-top: 120px;
+  }
+}
