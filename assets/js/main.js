@@ -229,9 +229,8 @@ letterFadeSlide(".servicess-intro", ".servicess-intro", 20, 0.02, 0.25);
 letterFadeSlide(".about-title-section", ".about-title-section", 20, 0.02, 0.25);
 
 letterFadeSlide(".contact-title", ".contact-title", 20, 0.09, 0.01);
-contact - intro;
-letterFadeSlide(".contact-title", ".contact-title", 20, 0.09, 0.01);
 
+letterFadeSlide(".contact-intro", ".contact-intro", 20, 0.01, 0.0);
 // =========================== yorumlar
 
 // Testimonials ve açıklama animasyonu
