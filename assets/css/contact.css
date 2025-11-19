@@ -99,7 +99,6 @@
 }
 
 .phone-item .phone-number {
-  direction: ltr;
   unicode-bidi: embed;
 }
 
