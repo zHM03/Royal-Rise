@@ -436,7 +436,7 @@ elements.forEach((el, i) => {
   gsap.from(el, {
     scrollTrigger: {
       trigger: el,
-      start: "top 90%",
+      start: "top 100%",
       toggleActions: "play none none none",
       scroller: "#smooth-wrapper",
     },
@@ -474,7 +474,7 @@ gsap.from(".services-menu", {
 gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.batch(".service-box-link", {
-  start: "top 80%", // kutu viewport'un %80'ine geldiğinde
+  start: "top 90%", // kutu viewport'un %80'ine geldiğinde
   onEnter: (batch) => {
     gsap.to(batch, {
       y: 0,
